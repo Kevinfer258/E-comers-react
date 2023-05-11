@@ -1,30 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import './Styles/FilterPrice.css'
 const FilterPrice = ({setfromTo}) => {
-   const {reset, register, handleSubmit} = useForm()
-   const submit = data =>{
-    setfromTo(data)
+    const { reset, register, handleSubmit } = useForm();
+  const [filterShow, setFilterShow] = useState(true);
+
+  const submit = (data) => {
+    setFromTo(data);
     reset({
-        from:'',
-        to:''
-    })
-   }
+      from: "",
+      to: "",
+    });
+  };
+
+  const changeFilterShow = () => {
+    setFilterShow(!filterShow);
+  };
+
   return (
-   <article className='price'>
-    <h3 className='price_title'>Price</h3>
-    <form  className='price_form' onSubmit={handleSubmit(submit)}>
-        <div  className='price_item'>
-            <label className='price_label' htmlFor="from">From</label>
-            <input className='price_input' {...register('from')} type="text"id='from' />
-        </div>
-        <div className='price_item'>
-            <label className='price_label' htmlFor="to">To</label>
-            <input className='price_input' {...register('to')} type="number"id='to' />
-        </div>
-    </form>
-        <button className='price_btn'>Filter Price</button>
-   </article>
+    <article>
+      <div  className="price">
+      <div onClick={changeFilterShow} className="selector__filter">
+        <h3 className="price_title">Price</h3>
+        <i
+          className={`btn-category-down bx ${
+            filterShow ? "bx-chevron-down" : "bx-chevron-up"
+          }`}
+        ></i>
+      </div>
+      </div>
+      <article>
+      {filterShow && (
+        <form className="price_form" onSubmit={handleSubmit(submit)}>
+          <div className="price_item">
+            <label  className='price_label' >From</label>
+            <input className='price_input' {...register("from")} type="number" id="from" />
+          </div>
+          <div className="price_item">
+            <label className='price_label'>To</label>
+            <input className='price_input' {...register("to")} type="number" id="to" />
+          </div>
+        </form>
+      )}
+        
+      <button className="price_btn">Filter Price</button>
+      </article>
+    </article>
   )
 }
 

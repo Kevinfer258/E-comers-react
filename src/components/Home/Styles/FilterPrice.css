@@ -13,9 +13,7 @@
     justify-content: center;
     align-items: center;
 }
-.price_item{
-    margin-right: 0.1em;
-}
+
 .price_input{
     width: 175px;
     height: 25px;
@@ -78,4 +76,27 @@
         flex-direction: column;
 
     }
+
   }
+  @media screen and (min-width:1440px) {
+    .price{
+      padding-left: 8em;
+    }
+    .price_item{
+        display: flex;
+        gap: 1em;
+    }
+    .price_label{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    .price_form{
+        width: 175px;
+        height: 25px;
+        padding-left: 8em;
+    }
+  .price_btn{
+    margin-left: 5em;
+    margin-top: 1.5em;
+  }
+}
