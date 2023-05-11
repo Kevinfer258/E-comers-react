@@ -25,10 +25,10 @@ const FilterCategory = () => {
     }
 
     return (
-        <article>
-            <h3>Categorias</h3>
-            <ul>
-                <li onClick={handleClickAllProducts}>All products</li>
+        <article className='category'>
+            <h3 className='category_title'>Categorias</h3>
+            <ul className='category_label'>
+                <li className='category_value' onClick={handleClickAllProducts}>All products</li>
                 {
                     categories?.map(category => (
                         <li onClick={() => handleClickCategories(category.id)} key={category.id}>{category.name}</li>

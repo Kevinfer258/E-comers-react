@@ -10,6 +10,7 @@
     justify-content: center;
     gap: 3em;
     margin-bottom: 2em;
+    flex-direction: column; 
 }
 .cart_footer{
     display: grid;
@@ -41,6 +42,7 @@
     color: white;
     border-radius: 0.4em;
     grid-column: span 2;
+    margin-bottom: 2em;
 }
 .cart__btn:hover{
     filter: brightness(1.15);
