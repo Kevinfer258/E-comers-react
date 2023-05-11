@@ -33,3 +33,11 @@
 .login__linkRegister{
     font-size: 12px;
 }
+.login__btn-modal{
+    width: 13rem;
+    padding: 0.5em;
+    margin-top: 1.5rem;
+    color: white;
+    background-color: #f85555;
+    border-radius: 5px;
+}

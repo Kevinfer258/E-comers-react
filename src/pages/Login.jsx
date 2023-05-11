@@ -1,14 +1,21 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuthentication from "../hooks/useAuthentication";
 import "./styles/login.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Modal from "../utils/Modal/Modal";
 
 const Login = () => {
   const { loginUser } = useAuthentication();
   const navigate = useNavigate(); //
   const token = localStorage.getItem("token");
-
-  const callback = () => navigate("/"); //
+  const [showModal, setShowModal] = useState(false);
+  const callback = (openModal) => {
+    if (openModal) {
+      setShowModal(true);
+    } else {
+      navigate("/");
+    }
+  }; //
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -16,6 +23,11 @@ const Login = () => {
     const password = e.target.password.value;
     const data = { email, password };
     loginUser(data, callback); //
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    navigate("/");
   };
 
   useEffect(() => {
@@ -47,6 +59,10 @@ const Login = () => {
       <h3 className="login__linkRegister">
         Don´t havean account?<Link to={"/register"}>Sing up</Link>
       </h3>
+      <Modal showModal={showModal} onClose={closeModal}>
+        <h3> Hola! Bienvenid@ </h3>
+        <button onClick={closeModal}>Ok</button>
+      </Modal>
     </div>
   );
 };

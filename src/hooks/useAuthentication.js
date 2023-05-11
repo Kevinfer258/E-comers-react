@@ -15,7 +15,7 @@ const useAuthentication = () => {
             .post(url, data)
             .then(res => {
                 localStorage.setItem('token', res.data.token)
-                callback()
+                callback(true)
                 console.log(res.data)
             })
             .catch(err => {
