@@ -1,6 +1,7 @@
 .slider{
     width: 100%;
     max-width: 600px;
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -18,8 +19,8 @@
 
 }
 .slider__img{
-    max-width: 450px;
-    min-width: 300px;
+    max-width: 500px;
+    min-width: 200px;
     height: 100%;
     object-fit: contain;
 }

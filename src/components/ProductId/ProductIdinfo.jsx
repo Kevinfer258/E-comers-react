@@ -23,25 +23,31 @@ const ProductIdinfo = ({product}) => {
     }
 
   return (
-    <section>
+    <section className='Pinfo-total'>
+        <div className='Pinfo-container'>
         <h3 className='Pinfo-h3'>{product?.brand}</h3>
         <h2 className='Pinfo-h2'>{product?.title}</h2>
         <p className='Pinfo-p'>{product?.description}</p>
+        </div>
         <footer>
-            <div>
-                <span>Price</span>
-                <span>{product?.price}</span>
-            </div>
-            <div>
-                <span>Quanquity</span>
-                <div>
-                    <button onClick={handleMinus}>-</button>
-                    <div>{quantity}</div>
-                    <button onClick={handlePlus}>+</button>
+            <div className='PinfoGeneral'>
+                <div className='Pinfo1'>
+                    <span className='Pinfo-price'>Price:</span>
+                    <span className='Pinfo-priced'>${product?.price}</span>
                 </div>
-                <button onClick={handleAddCart}>
+                <div className='Pinfo2'>
+                    <span className='Pinfo-price2'>Quanquity</span>
+                    <div className='Pinfo-btnss'>
+                        <button className='Pinfo-btn1' onClick={handleMinus}>-</button>
+                        <div className='Pinfo-btnss-cantidad'>{quantity}</div>
+                        <button className='Pinfo-btn2' onClick={handlePlus}>+</button>
+                    </div>
+                </div>
+            </div>
+            <div className='Pinfo-bcart'>
+            <button className='Pinfo-addtocart' onClick={handleAddCart}>
                     Add to cart <i className='bx bx-cart'></i>
-                </button>
+            </button>
             </div>
         </footer>
     </section>

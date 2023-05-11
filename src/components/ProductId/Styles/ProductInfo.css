@@ -7,8 +7,109 @@
     color: #515151;
     margin-bottom: 20px;
     margin-left: 10px;
+    padding-bottom: 0.5rem;
 }
 .Pinfo-p{
-    
+    font-family: monospace;
+    text-align: justify;
     margin-bottom: 30px;
+    font-size: 1.1rem;
 }
+.PinfoGeneral{
+  display: flex;
+  flex-direction: row;  
+}
+.Pinfo1{
+    gap: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.Pinfo-price{
+    margin: 0;
+}
+.Pinfo-priced{
+    font-size: 1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: #515151;
+}
+.Pinfo2{
+    gap: 1rem;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.Pinfo-btnss{
+    display: flex;
+    flex-direction: row;
+}
+.Pinfo-btnss-cantidad{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #e2e1e1;
+}
+.Pinfo-btn1{
+    background: #e2e1e1;
+    border: 1px solid #e2e1e1;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    transition: transform 300ms ease;
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .7rem;
+    
+}
+.Pinfo-btn2{
+    background: #e2e1e1;
+    border: 1px solid #e2e1e1;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    transition: transform 300ms ease;
+    border-top-right-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+}
+.Pinfo-btn1:hover{
+    transform: scale(1.1);
+}
+.Pinfo-btn2:hover{
+    transform: scale(1.1);
+}
+.Pinfo-addtocart{
+    background: #f85555;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    padding: 15px;
+    width: 100%; 
+    transition: transform 300ms ease; 
+    border-top-right-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+}
+.Pinfo-addtocart:hover{
+    transform: scale(1.1);
+    background: #ffffff;
+    color: #f85555;
+    border: 1px solid #f85555;
+}
+.Pinfo-bcart{
+    padding-top: 3rem;
+}
+
+@media (max-width: 1090px){
+    .Pinfo-total{
+      padding: 0 1rem;  
+    }
+  }
+  @media (max-width: 500px){
+    .Pinfo-total{
+       padding: 0 1rem;
+    }
+    .Pinfo-p{
+        padding: 0 1rem;
+    }
+  }

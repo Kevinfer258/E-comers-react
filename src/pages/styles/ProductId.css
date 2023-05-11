@@ -1,11 +1,11 @@
 .slibloque-1{
- padding: 2rem;
- display: grid;
- grid-template-columns: repeat(2, 1fr);
- justify-content: center;
- align-items: center;
- flex-direction: row;
- gap: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
 }
 .slibloque-general{
     padding-top: 3rem;
@@ -15,3 +15,22 @@
     justify-items: center;
     align-items: center;
 }
+@media (max-width: 1090px){
+    .slibloque-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (max-width: 500px){
+    .slibloque-1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (max-width: 300px){
+    .slibloque-1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }

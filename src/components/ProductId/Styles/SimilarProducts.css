@@ -1,0 +1,30 @@
+.sp-general{
+    padding-top: 1rem;
+}
+
+.sp-h2{
+    color: #f85555;
+    display: flex;
+    padding: 1rem;
+}
+.sp-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1024px;
+  gap: 2rem;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+ 
+@media (max-width: 800px){
+    .sp-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 500px){
+    .sp-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
