@@ -22,6 +22,7 @@ const CardProduct = ( {product}) => {
     }
 
   return (
+
     <article className='product' onClick={handleSelectProduct}>
         <header className='product__header'>
             <img className='product__img product__img-1'
@@ -40,7 +41,7 @@ const CardProduct = ( {product}) => {
             </section>
             <div className='product__price'>
                 <span className='product__price-label'>Price:</span>
-                <span className='product__price-value'>s/.{product.price}</span>
+                <span className='product__price-value'>$ {product.price}</span>
             </div>
             <button onClick={handleBtnClick} className='product__btn'>
                 <i className='bx bx-cart-add' ></i>

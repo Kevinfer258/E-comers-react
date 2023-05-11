@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import CardProduct from '../components/Home/CardProduct'
 import FilterCategory from '../components/Home/FilterCategory'
 import FilterPrice from '../components/Home/FilterPrice'
-
+import './styles/HomeProducts.css'
 
 const Home = () => {
 
@@ -47,7 +47,7 @@ const Home = () => {
       <input ref={input}  onChange={handleChangeInput} type="text"/>
       <FilterCategory />
       <FilterPrice setfromTo={setfromTo}/>
-      <div>
+      <div  className='home_product-grid'>
         {
           productFilter?.map(prod =>(
             <CardProduct
