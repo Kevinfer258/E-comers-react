@@ -48,3 +48,33 @@
 .slider__right{
     right:  0;
 }
+  
+.slider__interior2{
+    display: none;
+}
+
+
+@media (min-width: 1000px) {
+    .slider__interior2{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        overflow: hidden; 
+    }
+    .slider__interior2 li{
+        width: 70px;
+        height: 70px;
+        padding: 5px;
+        margin: 0 10px;
+    }
+    .slider__interior2 li.selected{
+        border: 2px solid #f85555;
+        border-radius: 6px;
+    }
+    .slider__img2{
+        height: 100%;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+}
