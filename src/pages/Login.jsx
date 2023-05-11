@@ -60,8 +60,8 @@ const Login = () => {
         Don´t havean account?<Link to={"/register"}>Sing up</Link>
       </h3>
       <Modal showModal={showModal} onClose={closeModal}>
-        <h3> Hola! Bienvenid@ </h3>
-        <button onClick={closeModal}>Ok</button>
+        <h3> Hello! welcome</h3>
+        <button className="login__btn-modal" onClick={closeModal}>Ok</button>
       </Modal>
     </div>
   );

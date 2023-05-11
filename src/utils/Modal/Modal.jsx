@@ -6,7 +6,7 @@ const Modal = ({ showModal, onClose, children }) => {
       {showModal && (
         <div className="modal">
           <div className="modal__container">
-            <i className="bx bx-x" onClick={() => onClose(false)}></i>
+            <i className="modal__icon bx bx-x" onClick={() => onClose(false)}></i>
             {children}
           </div>
         </div>
