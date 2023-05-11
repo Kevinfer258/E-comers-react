@@ -1,12 +1,13 @@
 
 .product{
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     border: 1px solid #cca;
     background-color: white;
     transition: transform 200ms ease;
     cursor: pointer;
     border-radius: 0.8rem;
+    min-width: 250px;
 }
 .product:hover{
     transform: scale(1.03);
