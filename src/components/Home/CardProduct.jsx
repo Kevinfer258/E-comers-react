@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import './Styles/CardProduct.css'
+import './Styles/cardProduct.css'
 import React from 'react'
 import useCrudCart from '../../hooks/useCrudCart'
 

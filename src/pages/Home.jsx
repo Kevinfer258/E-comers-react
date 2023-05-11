@@ -60,20 +60,26 @@ const Home = () => {
         <FilterCategory />
         <FilterPrice setfromTo={setfromTo} />
       </div>
+
       <div className="home_container">
-        <input
-          className="home_input"
-          ref={input}
-          onChange={handleChangeInput}
-          placeholder="What are you looking for?"
-          type="text"
-        />
-        <i
-          className="mobile_filter bx bx-filter-alt"
-          onClick={() => toggleMenu()}
-        >
-          Filter
-        </i>
+        <div>
+          <input
+            className="home_input"
+            ref={input}
+            onChange={handleChangeInput}
+            placeholder="What are you looking for?"
+            type="text"
+          />
+          <i
+            className="mobile_filter bx bx-filter-alt"
+            onClick={() => toggleMenu()}
+          >
+            Filter
+          </i>
+          <button className="home_btn">
+            <i className="bx bx-search btn__search-p"></i>
+          </button>
+        </div>
         <div className="home_product-grid">
           {productFilter?.map((prod) => (
             <CardProduct key={prod.id} product={prod} />
