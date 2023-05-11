@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useCrudCart from '../../hooks/useCrudCart'
+import './Styles/ProductInfo.css'
 
 const ProductIdinfo = ({product}) => {
     const [quantity, setQuantity] = useState(1)
@@ -23,9 +24,9 @@ const ProductIdinfo = ({product}) => {
 
   return (
     <section>
-        <h3>{product?.brand}</h3>
-        <h2>{product?.title}</h2>
-        <p>{product?.description}</p>
+        <h3 className='Pinfo-h3'>{product?.brand}</h3>
+        <h2 className='Pinfo-h2'>{product?.title}</h2>
+        <p className='Pinfo-p'>{product?.description}</p>
         <footer>
             <div>
                 <span>Price</span>

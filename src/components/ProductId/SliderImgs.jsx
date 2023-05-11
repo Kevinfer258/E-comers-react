@@ -27,7 +27,8 @@ const SliderImgs = ({product}) => {
   return (
     <div className='slider'>
       <button onClick={handlePrev}  className='slider__arrowhead slider__left'>
-        &lt;</button>
+        <i class='bx bx-chevron-left'></i>
+       </button>
       <div style={objStyle} className='slider__interior'>
       {
         product?.images.map((imgInfo) => (
@@ -41,7 +42,8 @@ const SliderImgs = ({product}) => {
       }
       </div>
       <button onClick={handleNext} className='slider__arrowhead slider__right'>
-        &gt;</button>
+        <i class='bx bx-chevron-right' ></i>
+        </button>
     </div>
   )
 }
