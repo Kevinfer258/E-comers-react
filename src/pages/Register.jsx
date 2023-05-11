@@ -1,45 +1,47 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import useAuthentication from '../hooks/useAuthentication'
-import defaulRegisterValues from '../utils/defaultRegisterValius'
+import React from "react";
+import { useForm } from "react-hook-form";
+import useAuthentication from "../hooks/useAuthentication";
+import defaulRegisterValues from "../utils/defaultRegisterValius";
+import './styles/register.css'
 
 const Register = () => {
+  const { register, handleSubmit, reset } = useForm();
 
-  const {register, handleSubmit , reset} = useForm()
+  const { createNewUser } = useAuthentication();
 
-  const { createNewUser } =  useAuthentication()
-
-  const submit = data => {
-    createNewUser(data)
-    reset(defaulRegisterValues)
-  }
+  const submit = (data) => {
+    createNewUser(data);
+    reset(defaulRegisterValues);
+  };
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-      <h2>CREATE A NEW USER</h2>
-      <div>
-        <label htmlFor="firstName">Firt Name:</label>
-        <input {...register('firstName')} type='text' id='firstName'/>
-      </div>
-      <div>
-        <label htmlFor="ñastName">Last Name:</label>
-        <input {...register('lastName')} type='text' id='lastName'/>
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input {...register('email')} type='email' id='email'/>
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input {...register('password')} type='password' id='password'/>
-      </div>
-      <div>
-        <label htmlFor="phone">phone:</label>
-        <input {...register('phone')} type='tel' id='phone'/>
-      </div>
-      <button>Register</button>
-    </form>
-  )
-}
+    <div className="register__container">
+      <h2 className="register__title">CREATE NEW USER</h2>
+      <form className="register__form" onSubmit={handleSubmit(submit)}>
+        <div>
+          <label className="register__label" htmlFor="firstName">Firt Name:</label>
+          <input className="register__input" {...register("firstName")} type="text" id="firstName" />
+        </div>
+        <div>
+          <label className="register__label" htmlFor="lastName">Last Name:</label>
+          <input className="register__input" {...register("lastName")} type="text" id="lastName" />
+        </div>
+        <div>
+          <label className="register__label" htmlFor="email">Email:</label>
+          <input className="register__input" {...register("email")} type="email" id="email" />
+        </div>
+        <div>
+          <label className="register__label" htmlFor="password">Password:</label>
+          <input className="register__input" {...register("password")} type="password" id="password" />
+        </div>
+        <div>
+          <label className="register__label" htmlFor="phone">phone:</label>
+          <input className="register__input" {...register("phone")} type="tel" id="phone" />
+        </div>
+        <button className="register__btn">Register</button>
+      </form>
+    </div>
+  );
+};
 
-export default Register
+export default Register;
