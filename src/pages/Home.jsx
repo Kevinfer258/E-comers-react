@@ -43,8 +43,8 @@ const Home = () => {
   })
 
   return (
-    <div>
-      <input ref={input}  onChange={handleChangeInput} type="text"/>
+    <div className='home'>
+      <input className='home_input' ref={input} onChange={handleChangeInput} placeholder="What are you looking for?"type="text"/>
       <FilterCategory />
       <FilterPrice setfromTo={setfromTo}/>
       <div  className='home_product-grid'>

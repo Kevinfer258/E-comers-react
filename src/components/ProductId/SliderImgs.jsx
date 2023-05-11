@@ -27,7 +27,7 @@ const SliderImgs = ({product}) => {
   return (
     <div className='slider'>
       <button onClick={handlePrev}  className='slider__arrowhead slider__left'>
-        <i class='bx bx-chevron-left'></i>
+        <i className='bx bx-chevron-left'></i>
        </button>
       <div style={objStyle} className='slider__interior'>
       {
@@ -42,7 +42,7 @@ const SliderImgs = ({product}) => {
       }
       </div>
       <button onClick={handleNext} className='slider__arrowhead slider__right'>
-        <i class='bx bx-chevron-right' ></i>
+        <i className='bx bx-chevron-right' ></i>
         </button>
     </div>
   )
