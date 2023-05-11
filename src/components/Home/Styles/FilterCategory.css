@@ -9,19 +9,3 @@
     font-size: 1.2rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-@media (min-width:1440px) {
-    .category{
-        display: flex;
-        flex-direction: column;
-        margin-top: 1em;
-        gap: 0.5em;
-        padding: 1em;
-        cursor: pointer;
-        padding-left: 7em;
-    }
-    .category__list{
-        font-size: 1.2rem;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-  }

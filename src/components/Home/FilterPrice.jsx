@@ -29,7 +29,7 @@ const FilterPrice = ({ setfromTo }) => {
           ></i>
         </div>
       </div>
-      <article>
+      <article className="price_container-first">
         {filterShow && (
           <form className="price_form" onSubmit={handleSubmit(submit)}>
             <div className="price_item">

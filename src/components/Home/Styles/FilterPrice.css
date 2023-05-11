@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
 }
+.price_container-first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .price_title {
     text-align: center;
@@ -40,71 +45,3 @@
         flex-direction: column;
     }
 }
-
-/* @media screen and (max-width: 800px) {
-    .price_input {
-        width: 175px;
-        height: 25px;
-        display: flex;
-    }
-
-    .price_form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .home-category-price {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
-        flex-direction: column;
-
-    }
-}
-
-@media screen and (max-width:1452px) {
-    .price_input {
-        width: 175px;
-        height: 25px;
-        display: flex;
-    }
-
-    .price_form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-} */
-/* 
-@media screen and (min-width:1440px) {
-    .price {
-        padding-left: 8em;
-    }
-
-    .price_item {
-        display: flex;
-        gap: 1em;
-    }
-
-    .price_label {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
-
-    .price_form {
-        width: 175px;
-        height: 25px;
-        padding-left: 8em;
-    }
-
-    .price_btn {
-        margin-left: 5em;
-        margin-top: 1.5em;
-    }
-} */
