@@ -1,0 +1,24 @@
+.prodpurchases__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5em;
+    padding: 0.5em;
+
+.f-grow {
+    flex-grow: 1;
+    flex-basis: 0;
+    align-self: center;
+    text-align: center;
+}
+
+.prodpurchases__img {
+    width: 25%;
+    object-fit: contain;
+}
+
+.prodpurchases__title {
+    font-size: 12px;
+}
+.prodpurchases__unid{
+    border: 2px;
+}

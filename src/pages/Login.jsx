@@ -1,17 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuthentication from "../hooks/useAuthentication";
 import "./styles/login.css";
+import { useEffect } from "react";
 
 const Login = () => {
   const { loginUser } = useAuthentication();
+  const navigate = useNavigate(); //
+  const token = localStorage.getItem("token");
+
+  const callback = () => navigate("/"); //
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     const data = { email, password };
-    loginUser(data);
+    loginUser(data, callback); //
   };
+
+  useEffect(() => {
+    if (token) {
+      callback();
+    }
+  }, []);
 
   return (
     <div className="login__container">

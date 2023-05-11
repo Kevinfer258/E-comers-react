@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import usePurchases from '../hooks/usePurchases'
 import ProductPurchases from '../components/Purchases/ProductPurchases'
+
 
 const Purchases = () => {
 
@@ -14,7 +15,7 @@ const Purchases = () => {
 
   return (
     <div>
-        <h2>Purchases</h2>
+        <h2 className='purchases__title'>My Purchases</h2>
         <div>
             {
                 purchases?.map( prodPurchases => (
