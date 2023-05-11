@@ -1,24 +1,30 @@
-.price{
+.price__container {
     display: flex;
-    padding: 1em;
     flex-direction: column;
-    align-items: flex-start;
 }
-.price_title{
+
+.price_title {
     text-align: center;
     margin-top: 1em;
 }
-.price_form{
+
+.price_form {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.price_input{
+.price_input {
     width: 175px;
     height: 25px;
 }
-.price_btn{
+.price_item{
+    display: flex;
+    flex-direction: column;
+}
+
+.price_btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,25 +33,29 @@
     height: 25px;
     background-color: #f85555;
 }
-  @media (min-width: 700px){
-    .price_form{
+
+@media (min-width: 700px) {
+    .price_form {
         display: flex;
         flex-direction: column;
     }
-  }
-  @media screen and (max-width: 800px) {
-    .price_input{
+}
+
+/* @media screen and (max-width: 800px) {
+    .price_input {
         width: 175px;
         height: 25px;
         display: flex;
     }
-    .price_form{
+
+    .price_form {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
-    .home-category-price{
+
+    .home-category-price {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -54,49 +64,47 @@
         flex-direction: column;
 
     }
-  }
-  @media screen and (max-width:1452px) {
-    .price_input{
+}
+
+@media screen and (max-width:1452px) {
+    .price_input {
         width: 175px;
         height: 25px;
         display: flex;
     }
-    .price_form{
+
+    .price_form {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-    }
-    .home-category-price{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
-        flex-direction: column;
 
     }
 
-  }
-  @media screen and (min-width:1440px) {
-    .price{
-      padding-left: 8em;
+} */
+/* 
+@media screen and (min-width:1440px) {
+    .price {
+        padding-left: 8em;
     }
-    .price_item{
+
+    .price_item {
         display: flex;
         gap: 1em;
     }
-    .price_label{
+
+    .price_label {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
-    .price_form{
+
+    .price_form {
         width: 175px;
         height: 25px;
         padding-left: 8em;
     }
-  .price_btn{
-    margin-left: 5em;
-    margin-top: 1.5em;
-  }
-}
+
+    .price_btn {
+        margin-left: 5em;
+        margin-top: 1.5em;
+    }
+} */
