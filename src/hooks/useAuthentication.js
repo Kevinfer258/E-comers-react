@@ -7,19 +7,18 @@ const useAuthentication = () => {
         return axios.post(url, data);
     }
 
-    const loginUser = (data, callback) => {
+    const loginUser = (data) => {
         const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/users/login'
-        axios
+        return axios
             .post(url, data)
-            .then(res => {
-                localStorage.setItem('token', res.data.token)
-                callback(true)
-                console.log(res.data)
-            })
-            .catch(err => {
-                console.error(err)
-                localStorage.removeItem('token')
-            })
+
+        /* .then(res => {
+            
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.error(err)
+        }) */
     }
 
     return { createNewUser, loginUser }

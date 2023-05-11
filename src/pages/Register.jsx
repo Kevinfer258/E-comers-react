@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import useAuthentication from "../hooks/useAuthentication";
 import defaulRegisterValues from "../utils/defaultRegisterValius";
 import "./styles/register.css";
-import Modal from "../utils/Modal/Modal";
+import Modal from "../components/shared/Modal";
+import Loading from "../components/shared/Loading";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -18,6 +19,7 @@ const Register = () => {
   };
 
   const submit = async (data) => {
+    setLoading(true);
     try {
       await createNewUser(data);
       setShowModal(true);
@@ -27,12 +29,13 @@ const Register = () => {
       setError(true);
     }
     reset(defaulRegisterValues);
+    setLoading(false);
   };
 
   return (
     <>
       {loading ? (
-        <div> </div>
+        <Loading />
       ) : (
         <div className="register__container">
           <h2 className="register__title">CREATE NEW USER</h2>
