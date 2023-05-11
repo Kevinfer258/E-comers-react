@@ -1,3 +1,6 @@
+.purchases__title{
+    padding: 1rem;   
+}
 .prodpurchases__container {
     display: flex;
     justify-content: space-evenly;
