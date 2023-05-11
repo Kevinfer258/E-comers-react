@@ -44,7 +44,10 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <div className='home_cotainer'>
       <input className='home_input' ref={input} onChange={handleChangeInput} placeholder="What are you looking for?"type="text"/>
+      <button className='home_btn'><i className='bx bx-search btn__search-p'></i></button>
+      </div>
       <div className='home-category-price'>
       <FilterCategory />
       <FilterPrice setfromTo={setfromTo}/>
