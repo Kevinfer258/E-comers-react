@@ -69,6 +69,7 @@
 .mobile_filter {
   color: #8f8b8b;
   font-size: 12px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

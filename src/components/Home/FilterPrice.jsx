@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Styles/FilterPrice.css";
-const FilterPrice = ({ setfromTo }) => {
+
+
+
+const FilterPrice = ({ setFromTo }) => {
   const { reset, register, handleSubmit } = useForm();
   const [filterShow, setFilterShow] = useState(true);
 

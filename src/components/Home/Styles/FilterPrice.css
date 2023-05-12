@@ -7,10 +7,18 @@
     flex-direction: column;
     align-items: center;
 }
+.selector__filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: wrap;
+    margin: 1em;
+}
 
 .price_title {
     text-align: center;
-    margin-top: 1em;
 }
 
 .price_form {
@@ -37,11 +45,4 @@
     width: 180px;
     height: 25px;
     background-color: #f85555;
-}
-
-@media (min-width: 700px) {
-    .price_form {
-        display: flex;
-        flex-direction: column;
-    }
 }
