@@ -62,7 +62,7 @@ const Home = () => {
       </div>
 
       <div className="home_container">
-        <div>
+        <div className="home_subcontainer">
           <div className="home_input-container">
             <input
               className="home_input"

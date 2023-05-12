@@ -4,6 +4,8 @@
     padding: 2rem;
     max-width: 300px;
     border-radius: 8px;
+    animation: flipInX; 
+    animation-duration: 2s;
 }
 .login__greeting{
     text-align: center;
