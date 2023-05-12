@@ -6,6 +6,8 @@
     color: #f85555;
     display: flex;
     padding: 1rem;
+    animation: fadeInLeft; 
+    animation-duration: 3s; 
 }
 .sp-container{
   display: grid;
@@ -20,6 +22,8 @@
   padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
+  animation: fadeInUp; 
+  animation-duration: 3s; 
 }
  
 @media (max-width: 800px){

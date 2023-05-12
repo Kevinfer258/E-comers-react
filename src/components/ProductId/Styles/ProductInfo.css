@@ -1,5 +1,7 @@
 .Pinfo-total{
     min-width: 200px;
+    animation: backInRight; 
+    animation-duration: 2s; 
 }
 
 .Pinfo-h3{

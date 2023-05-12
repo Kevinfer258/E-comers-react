@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Styles/SliderImgs.css'
+import 'animate.css';
 
 const SliderImgs = ({product}) => {
 
