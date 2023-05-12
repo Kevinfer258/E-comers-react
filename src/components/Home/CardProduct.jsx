@@ -9,7 +9,7 @@ const CardProduct = ( {product}) => {
         const {addProductToCart} = useCrudCart()
 
     const handleSelectProduct = () =>{
-        navigate(`./product/${product.id}`)
+        navigate(`/product/${product.id}`)
     }
 
     const handleBtnClick = e =>{
