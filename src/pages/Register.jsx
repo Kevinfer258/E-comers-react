@@ -6,6 +6,7 @@ import "./styles/register.css";
 import Modal from "../components/shared/Modal";
 import Loading from "../components/shared/Loading";
 
+
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
 

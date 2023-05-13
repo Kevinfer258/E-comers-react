@@ -4,6 +4,8 @@ import { getAllProductCartTrunk } from '../store/slices/cart.slice'
 import ProductInCart from '../components/Cart/ProductInCart'
 import usePurchases from '../hooks/usePurchases'
 import './styles/Cart.css'
+
+
 const Cart = () => {
 
     const dispatch = useDispatch()

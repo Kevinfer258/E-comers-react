@@ -5,6 +5,7 @@ import FilterCategory from "../components/Home/FilterCategory";
 import FilterPrice from "../components/Home/FilterPrice";
 import "./styles/HomeProducts.css";
 
+
 const Home = () => {
   const [imputValue, setimputValue] = useState("");
   const [showFilter, setshowfilter] = useState(false);

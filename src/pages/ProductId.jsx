@@ -6,6 +6,7 @@ import SliderImgs from '../components/ProductId/SliderImgs'
 import SimilarProducts from '../components/ProductId/SimilarProducts'
 import './styles/ProductId.css'
 
+
 const ProductId = () => {
 
    const {id} = useParams()

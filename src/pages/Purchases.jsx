@@ -4,6 +4,7 @@ import ProductPurchases from '../components/Purchases/ProductPurchases'
 import "../components/Purchases/product-purchases.css"
 
 
+
 const Purchases = () => {
 
     const { purchases ,getAllProductPurchases} = usePurchases()
